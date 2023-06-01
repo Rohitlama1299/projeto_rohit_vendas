@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45045A5E-9A2D-40EC-B86D-D190F05A5EBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Rohit</RootNamespace>
+    <AssemblyName>Projeto_Rohit</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pt.com.Gvendas.DAO\SQLCliente.cs" />
+    <Compile Include="pt.com.Gvendas.DAO\SQLEncomenda.cs" />
+    <Compile Include="pt.com.Gvendas.DAO\SQLFornecedore.cs" />
+    <Compile Include="pt.com.Gvendas.DAO\SQLFuncionario.cs" />
+    <Compile Include="pt.com.Gvendas.DAO\SQLProdutos.cs" />
+    <Compile Include="pt.com.Gvendas.DAO\SQL\SQLConnection.cs" />
+    <Compile Include="pt.com.Gvendas.MODEL\Clientes.cs" />
+    <Compile Include="pt.com.Gvendas.MODEL\Encomenda.cs" />
+    <Compile Include="pt.com.Gvendas.MODEL\Fornecedore.cs" />
+    <Compile Include="pt.com.Gvendas.MODEL\Funcionario.cs" />
+    <Compile Include="pt.com.Gvendas.MODEL\Produto.cs" />
+    <Compile Include="pt.com.Gvendas.VIEWS\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pt.com.Gvendas.VIEWS\FormEncomendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormEncomendas.Designer.cs">
+      <DependentUpon>FormEncomendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormFornecedores.Designer.cs">
+      <DependentUpon>FormFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormFuncionarios.Designer.cs">
+      <DependentUpon>FormFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.Gvendas.VIEWS\FormProdutos.Designer.cs">
+      <DependentUpon>FormProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\util.cs" />
+    <Compile Include="Ver_Dados\ListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_Dados\ListaClientes.Designer.cs">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Encomedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Encomedas.Designer.cs">
+      <DependentUpon>Lista_Encomedas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Fornecedores.Designer.cs">
+      <DependentUpon>Lista_Fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Funcionarios.Designer.cs">
+      <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_Dados\Lista_Produtos.Designer.cs">
+      <DependentUpon>Lista_Produtos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormEncomendas.resx">
+      <DependentUpon>FormEncomendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormFornecedores.resx">
+      <DependentUpon>FormFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormFuncionarios.resx">
+      <DependentUpon>FormFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.Gvendas.VIEWS\FormProdutos.resx">
+      <DependentUpon>FormProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_Dados\ListaClientes.resx">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_Dados\Lista_Encomedas.resx">
+      <DependentUpon>Lista_Encomedas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_Dados\Lista_Fornecedores.resx">
+      <DependentUpon>Lista_Fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_Dados\Lista_Funcionarios.resx">
+      <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_Dados\Lista_Produtos.resx">
+      <DependentUpon>Lista_Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pt.com.Gvendas.CONEXAO\Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pt.com.Gvendas.CONEXAO\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
